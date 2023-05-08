@@ -411,6 +411,20 @@ DEFINE_TRACEPOINT(
   TRACEPOINT_ARGS(
     buffer))
 
+// For ros2_canopen  
+DEFINE_TRACEPOINT(
+  canopen_tpdo_data,
+  TRACEPOINT_PARAMS(
+    const uint8_t node_id,
+    const uint16_t index,
+    const uint8_t subindex,
+    const uint32_t data),
+  TRACEPOINT_ARGS(
+    node_id, 
+    index,
+    subindex,
+    data))
+
 #ifndef _WIN32
 # pragma GCC diagnostic pop
 #else

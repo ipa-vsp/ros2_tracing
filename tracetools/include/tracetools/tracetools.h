@@ -615,6 +615,25 @@ DECLARE_TRACEPOINT(
   rclcpp_ring_buffer_clear,
   const void * buffer)
 
+// For ros2_canopen
+/// `canopen_tpdo_data`
+/**
+ * CANopen TPDO data.
+ * Notes the CANopen node ID, the PDO index, the PDO subindex, and the PDO data.
+ *
+ * \param[in] node_id CANopen node ID
+ * \param[in] index PDO index
+ * \param[in] subindex PDO subindex
+ * \param[in] data PDO data
+ */
+
+DECLARE_TRACEPOINT(
+  canopen_tpdo_data,
+  const uint8_t node_id, 
+  const uint16_t index,
+  const uint8_t subindex,
+  const uint32_t data)
+
 #ifdef __cplusplus
 }
 #endif

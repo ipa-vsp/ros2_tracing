@@ -49,3 +49,6 @@ rclcpp_construct_ring_buffer = 'ros2:rclcpp_construct_ring_buffer'
 rclcpp_ring_buffer_enqueue = 'ros2:rclcpp_ring_buffer_enqueue'
 rclcpp_ring_buffer_dequeue = 'ros2:rclcpp_ring_buffer_dequeue'
 rclcpp_ring_buffer_clear = 'ros2:rclcpp_ring_buffer_clear'
+
+# For ros2_canopen tracing
+canopen_tpdo_data = 'ros2:canopen_tpdo_data'

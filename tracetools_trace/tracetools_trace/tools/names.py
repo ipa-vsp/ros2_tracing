@@ -96,7 +96,10 @@ DEFAULT_EVENTS_ROS = [
     tracepoints.rclcpp_construct_ring_buffer,
     tracepoints.rclcpp_ring_buffer_enqueue,
     tracepoints.rclcpp_ring_buffer_dequeue,
-    tracepoints.rclcpp_ring_buffer_clear
+    tracepoints.rclcpp_ring_buffer_clear,
+    
+    # For ros2_canopen analysis
+    tracepoints.canopen_tpdo_data
 ]
 
 DEFAULT_EVENTS_UST = DEFAULT_EVENTS_ROS
