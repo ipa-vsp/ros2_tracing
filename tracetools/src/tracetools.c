@@ -415,14 +415,23 @@ DEFINE_TRACEPOINT(
 DEFINE_TRACEPOINT(
   canopen_tpdo_data,
   TRACEPOINT_PARAMS(
+    const char * name,
     const uint8_t node_id,
-    const uint16_t index,
-    const uint8_t subindex,
-    const uint32_t data),
+    const int32_t data),
   TRACEPOINT_ARGS(
+    name,
     node_id, 
-    index,
-    subindex,
+    data))
+
+DEFINE_TRACEPOINT(
+  canopen_ros2_control_target_position,
+  TRACEPOINT_PARAMS(
+    const char * name,
+    const uint8_t node_id,
+    const int32_t data),
+  TRACEPOINT_ARGS(
+    name,
+    node_id, 
     data))
 
 #ifndef _WIN32

@@ -629,10 +629,24 @@ DECLARE_TRACEPOINT(
 
 DECLARE_TRACEPOINT(
   canopen_tpdo_data,
-  const uint8_t node_id, 
-  const uint16_t index,
-  const uint8_t subindex,
-  const uint32_t data)
+  const char * name,
+  const uint8_t node_id,
+  const int32_t data)
+
+/// `canopen_tpdo_data_raw`
+/**
+ * CANopen TPDO data raw.
+ * Notes the CANopen node ID, name, PDO data
+ * 
+ * \param[in] node_id CANopen node ID
+ * \param[in] name PDO name
+ * \param[in] data PDO data
+*/
+DECLARE_TRACEPOINT(
+  canopen_ros2_control_target_position,
+  const char * name,
+  const uint8_t node_id,
+  const int32_t data) 
 
 #ifdef __cplusplus
 }

@@ -99,7 +99,8 @@ DEFAULT_EVENTS_ROS = [
     tracepoints.rclcpp_ring_buffer_clear,
     
     # For ros2_canopen analysis
-    tracepoints.canopen_tpdo_data
+    tracepoints.canopen_tpdo_data,
+    tracepoints.canopen_ros2_control_target_position
 ]
 
 DEFAULT_EVENTS_UST = DEFAULT_EVENTS_ROS

@@ -508,16 +508,29 @@ TRACEPOINT_EVENT(
   TRACEPOINT_PROVIDER,
   canopen_tpdo_data,
   TP_ARGS(
+    const char *, name_arg,
     const uint8_t, node_id_arg,
-    const uint16_t, index_arg,
-    const uint8_t, subindex_arg,
-    const uint32_t, data_arg
+    const int32_t, data_arg
   ),
   TP_FIELDS(
+    ctf_string(name, name_arg)
     ctf_integer(const uint8_t, node_id, node_id_arg)
-    ctf_integer(const uint16_t, index, index_arg)
-    ctf_integer(const uint8_t, subindex, subindex_arg)
-    ctf_integer(const uint32_t, data, data_arg)
+    ctf_integer(const int32_t, data, data_arg)
+  )
+)
+
+TRACEPOINT_EVENT(
+  TRACEPOINT_PROVIDER,
+  canopen_ros2_control_target_position,
+  TP_ARGS(
+    const char *, name_arg,
+    const uint8_t, node_id_arg,
+    const int32_t, data_arg
+  ),
+  TP_FIELDS(
+    ctf_string(name, name_arg)
+    ctf_integer(const uint8_t, node_id, node_id_arg)
+    ctf_integer(const int32_t, data, data_arg)
   )
 )
 

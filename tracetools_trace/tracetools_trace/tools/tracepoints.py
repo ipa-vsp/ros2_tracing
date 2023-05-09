@@ -52,3 +52,4 @@ rclcpp_ring_buffer_clear = 'ros2:rclcpp_ring_buffer_clear'
 
 # For ros2_canopen tracing
 canopen_tpdo_data = 'ros2:canopen_tpdo_data'
+canopen_ros2_control_target_position = 'ros2:canopen_ros2_control_target_position'
